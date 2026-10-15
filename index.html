@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5339/5339380.png">
+</head>
+<body>
+    <main>
+        <h1>Formulari de registre</h1>
+            <p class="introduccio">Omple el formulari per registrar-te a l'activitat</p>
+            <form action="https://m0373ac3.free.nf/processa.php" method="get">
+                <fieldset>
+                    <legend>Dades personals</legend>
+                        <div class="camp">
+                            <label for="nom">Nom:</label>
+                            <input type="text" id="nom" name="Nom" required>
+                        </div>
+                        <div class="camp">
+                            <label for="cognoms">Cognoms:</label>
+                            <input type="text" id="cognoms" name="cognoms">
+                        </div>
+                        <div class="camp">
+                            <label for="correu">Correu electrònic:</label>
+                            <input type="email" id="correu" name="correu" required>
+                        </div>
+                        <div class="camp">
+                            <label for="contrasenya">Contrasenya:</label>
+                            <input type="password" id="contrasenya" name="contrasenya" required minlength="8">
+                        </div>
+                        
+                        <div class="camp">
+                            <label for="edat">Edat:</label>
+                            <input type="number" id="edat" name="edat" min="14" max="100">
+                        </div>
+                        <div class="camp">
+                            <label for="data_naixement">Data de naixement:</label>
+                            <input type="date" id="data_naixement" name="data_naixement">
+                        </div>
+                        <div class="camp">
+                            <label for="telèfon">Telèfon:</label>
+                            <input type="tel" id="telèfon" name="telèfon">
+                        </div>
+                        <div class="camp">
+                            <label for="pàgina_web">Pàgina web:</label>
+                            <input type="url" id="pàgina_web" name="pàgina_web">
+                        </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferències</legend>
+                        <div class="camp">
+                            <label for="color">Color preferit:</label>
+                            <input type="color" id="color" name="color" value="#0d6efd" >
+                        </div>
+                        <div class="camp">
+                            <label for="pregunta">Quant t'agrada programar?</label>
+                            <input type="range" id="pregunta" name="pregunta" min="0" max="10" value="5">
+                            <p class="ajuda">Selecciona un valor entre 0 i 10</p>
+                        </div>
+                        <hr>
+                        <label id="genere">Gènere</label>
+                        <div class="opcions">
+                                <label for="home"></label>
+                                <input type="radio" id="home" name="genere" value="home"><p>Home</p>
+                                <label for="dona"></label>
+                                <input type="radio" id="dona" name="genere" value="dona"><p>Dona</p>
+                                <label for="no_binari"></label>
+                                <input type="radio" id="no_binari" name="genere" value="no_binari"><p>No binari</p>
+                                <label for="bolsa_walmart"></label>
+                                <input type="radio" id="bolsa_walmart" name="genere" value="bolsa_walmart"><p>Bolsa Walmart</p>
+                        </div>
+                        <hr>
+                        <div class="opcion label">
+                            <label id="aficcions">Aficcions</label>
+                            <input type="checkbox" id="programacio" name="aficions[]" value="programacio"> Programació
+                            <label for="programacio"></label>
+                            <input type="checkbox" id="videojocs" name="aficions[]" value="videojocs"> Videojocs
+                            <label for="videojocs"></label>
+                            <input type="checkbox" id="esport" name="aficions[]" value="esport"> Esport
+                            <label for="esport"></label>
+                            <input type="checkbox" id="musica" name="aficions[]" value="musica"> Música
+                            <label for="musica"></label>
+                            <input type="checkbox" id="tennis" name="aficions[]" value="tennis">Tennis
+                            <label for="tennis"></label>
+                        </div>
+                        <p class="ajuda">Selecciona les teves aficcions</p>
+    
+                </fieldset>
+                <fieldset>
+                        <legend>Localització</legend>
+                                <div class="camp">
+                                    <label for="pais">País</label>
+                                        <select id="pais">
+                                                <option value="" selected disabled>-- Selecciona un país --</option>
+                                                <option value="espanya">Espanya</option>
+                                                <option value="frança">França</option>
+                                                <option value="italia">Itàlia</option>
+                                                <option value="portugal">Portugal</option>
+                                                <option value="alemanya">Alemanya</option>
+                                                <option value="regne unit">Regne Unit</option>
+                                                <option value="xina">Xina</option>
+                                        </select>
+                                </div>
+                                <div class="camp">
+                                <label for="municipi">Municipi</label>
+                                <input type="text" id="municipi" list="municipis">
+                                    <datalist id="municipis">
+                                            <option value="Barcelona"></option>
+                                            <option value="Girona"></option>
+                                            <option value="Lleida"></option>
+                                            <option value="Tarragona"></option>
+                                            <option value="Badalona"></option>
+                                            <option value="Sabadell"></option>
+                                            <option value="Terrassa"></option>
+                                            <option value="Mataró"></option>
+                                            <option value="Gavà"></option>
+                                            <opcion value="Viladecans"></opcion>
+                                    </datalist>
+                                    <p class="ajuda">Pots escriure un municipi o seleccionar-ne un de la llista</p>
+                                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Informació addicional</legend>
+                    <div class="camp">
+                        <label id="comentaris">Comentaris</label>
+                        <textarea id="comentaris_text" name="comentaris_text" placeholder="Escriu aquí els teus comentaris..."></textarea>
+                    </div>
+                    <hr>
+                    <div class="camp">
+                        <label id="fitxers">Adjunta un fitxer:</label>
+                        <input type="file" id="fitxer" name="fitxer">
+                        <label for="condicions"></label>
+                        <p class="ajuda"> Selecciona un fitxer del teu ordinador</p>
+                    </div>
+                    <div class="camp">
+                        <input type="checkbox" id="condicions" name="condicions" required>Accepto les condicions de la inscripció.
+                    </div>
+                    <hr>
+                    <div class="camp">
+                    <label for="temps">Temps</label>
+                    <input type="time" id="time" name="time">
+                    </div>
+                    <div class="camp">
+                        <label id="mes">Mes</label>
+                        <input type="month" id="mes" name="mes">
+                    </div>
+                </fieldset>
+                <div class="botons">
+                    <label for="enviar"></label>
+                    <input type="submit" id="enviar" value="Enviar">
+                    <label for="netejar"></label>
+                    <input type="reset" id="netejar" value="Netejar">
+                </div>
+            </form>
+    </main>
+</body>
+</html>

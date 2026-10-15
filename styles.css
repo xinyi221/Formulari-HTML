@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f3f5;
+    color: #212529;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.introduccio {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.camp {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="url"],
+input[type="color"],
+input[type="range"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="color"] {
+    height: 45px;
+    padding: 4px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.opcions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.opcio {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.opcio label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.ajuda {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.botons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background: #0d6efd;
+    color: white;
+}
+
+input[type="reset"] {
+    background: #6c757d;
+    color: white;
+}
+
+.condicions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.condicions label {
+    margin: 0;
+    font-weight: normal;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    margin: 30px 0;
+}
