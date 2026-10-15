@@ -11,7 +11,7 @@
     <main>
         <h1>Formulari de registre</h1>
             <p class="introduccio">Omple el formulari per registrar-te a l'activitat</p>
-            <form action="https://m0373ac3.free.nf/processa.php" method="get">
+            <form action="https://m0373ac3.free.nf/processa.php" method="get"  enctype="multipart/form-data">
                 <fieldset>
                     <legend>Dades personals</legend>
                         <div class="camp">
@@ -92,7 +92,7 @@
                         <legend>Localització</legend>
                                 <div class="camp">
                                     <label for="pais">País</label>
-                                        <select id="pais">
+                                        <select id="pais" name="Pais">
                                                 <option value="" selected disabled>-- Selecciona un país --</option>
                                                 <option value="espanya">Espanya</option>
                                                 <option value="frança">França</option>
@@ -105,8 +105,8 @@
                                 </div>
                                 <div class="camp">
                                 <label for="municipi">Municipi</label>
-                                <input type="text" id="municipi" list="municipis">
-                                    <datalist id="municipis">
+                                <input type="text" id="municipi" name="Municipis" list="municipis">
+                                    <datalist id="municipis" name="Municipis">
                                             <option value="Barcelona"></option>
                                             <option value="Girona"></option>
                                             <option value="Lleida"></option>
@@ -116,7 +116,7 @@
                                             <option value="Terrassa"></option>
                                             <option value="Mataró"></option>
                                             <option value="Gavà"></option>
-                                            <opcion value="Viladecans"></opcion>
+                                            <option value="Viladecans"></opcion>
                                     </datalist>
                                     <p class="ajuda">Pots escriure un municipi o seleccionar-ne un de la llista</p>
                                 </div>
@@ -125,12 +125,12 @@
                     <legend>Informació addicional</legend>
                     <div class="camp">
                         <label id="comentaris">Comentaris</label>
-                        <textarea id="comentaris" name="Comentaris_text" placeholder="Escriu aquí els teus comentaris..."></textarea>
+                        <textarea id="comentaris_text" name="Comentaris_text" placeholder="Escriu aquí els teus comentaris..."></textarea>
                     </div>
                     <hr>
                     <div class="camp">
                         <label id="fitxers">Adjunta un fitxer:</label>
-                        <input type="file" id="fitxer" name="Fitxer">
+                        <input type="file" id="fitxer" name="Fitxer" >
                         <label for="condicions"></label>
                         <p class="ajuda"> Selecciona un fitxer del teu ordinador</p>
                     </div>
@@ -140,10 +140,10 @@
                     <hr>
                     <div class="camp">
                     <label for="temps">Temps</label>
-                    <input type="time" id="time" name="Time">
+                    <input type="time" id="time" name="Temps">
                     </div>
                     <div class="camp">
-                        <label id="mes">Mes</label>
+                        <label for="mes">Mes</label>
                         <input type="month" id="mes" name="Mes">
                     </div>
                 </fieldset>
