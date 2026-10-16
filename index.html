@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <main>
         <h1>Formulari de registre</h1>
             <p class="introduccio">Omple el formulari per registrar-te a l'activitat</p>
-            <form action="https://m0373ac3.free.nf/processa.php" method="get">
+            <form action="https://m0373ac3.free.nf/processa.php" method="get" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Dades personals</legend>
                         <div class="camp">
@@ -41,7 +41,7 @@
                         </div>
                         <div class="camp">
                             <label for="telèfon">Telèfon:</label>
-                            <input type="tel" id="telèfon" name=Telèfon>
+                            <input type="tel" id="telèfon" name="Telèfon">
                         </div>
                         <div class="camp">
                             <label for="pàgina_web">Pàgina web:</label>
@@ -60,31 +60,35 @@
                             <p class="ajuda">Selecciona un valor entre 0 i 10</p>
                         </div>
                         <hr>
-                        <label id="genere">Gènere</label>
+                        <label for="genere">Gènere</label>
                         <div class="opcions">
-                                <label for="home"></label>
-                                <input type="radio" id="home" name="Genere" value="home"><p>Home</p>
-                                <label for="dona"></label>
-                                <input type="radio" id="dona" name="Genere" value="dona"><p>Dona</p>
-                                <label for="no_binari"></label>
-                                <input type="radio" id="no_binari" name="Genere" value="no_binari"><p>No binari</p>
-                                <label for="bolsa_walmart"></label>
-                                <input type="radio" id="bolsa_walmart" name="Genere" value="bolsa_walmart"><p>Bolsa Walmart</p>
+                                 <input type="radio" id="home" name="Genere" value="home">
+                                 <label for="home">Home</label>
+                            
+                                 <input type="radio" id="dona" name="Genere" value="dona">
+                                 <label for="dona">Dona</label>
+                               
+                                    <input type="radio" id="altre" name="Genere" value="Altre">
+                                    <label for="altre">Altre</label>
+                                
+                                    <input type="radio" id="bolsa_walmart" name="Genere" value="bolsa_walmart">
+                                    <label for="bolsa_walmart">Bolsa walmart</label>
                         </div>
                         <hr>
-                        <div class="opcion label">
-                            <label id="aficcions">Aficcions</label>
-                            <input type="checkbox" id="programacio" name="Aficions[]" value="programacio"> Programació
-                            <label for="programacio"></label>
-                            <input type="checkbox" id="videojocs" name="Aficions[]" value="videojocs"> Videojocs
-                            <label for="videojocs"></label>
-                            <input type="checkbox" id="esport" name="Aficions[]" value="esport"> Esport
-                            <label for="esport"></label>
-                            <input type="checkbox" id="musica" name="Aficions[]" value="musica"> Música
-                            <label for="musica"></label>
-                            <input type="checkbox" id="tennis" name="Aficions[]" value="tennis">Tennis
-                            <label for="tennis"></label>
-                        </div>
+                            <label for="aficcions">Aficcions</label>
+                            <br>
+                            <div class="opcions">
+                                <input type="checkbox" id="programacio" name="Aficions[]" value="programacio">
+                                <label for="programacio">Programació</label>
+                                <input type="checkbox" id="videojocs" name="Aficions[]" value="videojocs">
+                                <label for="videojocs">Videojocs</label>
+                                <input type="checkbox" id="esport" name="Aficions[]" value="esport">
+                                <label for="esport">Esport</label>
+                                <input type="checkbox" id="musica" name="Aficions[]" value="musica">
+                                <label for="musica">Música</label>
+                                <input type="checkbox" id="tennis" name="Aficions[]" value="tennis">
+                                <label for="tennis">Tennis</label>
+                            </div>
                         <p class="ajuda">Selecciona les teves aficcions</p>
     
                 </fieldset>
@@ -106,7 +110,7 @@
                                 <div class="camp">
                                 <label for="municipi">Municipi</label>
                                 <input type="text" id="municipi" name="Municipis" list="municipis">
-                                    <datalist id="municipis" name="Municipis">
+                                    <datalist id="municipis">
                                             <option value="Barcelona"></option>
                                             <option value="Girona"></option>
                                             <option value="Lleida"></option>
@@ -116,7 +120,7 @@
                                             <option value="Terrassa"></option>
                                             <option value="Mataró"></option>
                                             <option value="Gavà"></option>
-                                            <option value="Viladecans"></opcion>
+                                            <option value="Viladecans"></option>
                                     </datalist>
                                     <p class="ajuda">Pots escriure un municipi o seleccionar-ne un de la llista</p>
                                 </div>
@@ -124,12 +128,12 @@
                 <fieldset>
                     <legend>Informació addicional</legend>
                     <div class="camp">
-                        <label id="comentaris">Comentaris</label>
+                        <label for="comentaris">Comentaris</label>
                         <textarea id="comentaris_text" name="Comentaris_text" placeholder="Escriu aquí els teus comentaris..."></textarea>
                     </div>
                     <hr>
                     <div class="camp">
-                        <label id="fitxers">Adjunta un fitxer:</label>
+                        <label for="fitxers">Adjunta un fitxer:</label>
                         <input type="file" id="fitxer" name="Fitxer" >
                         <label for="condicions"></label>
                         <p class="ajuda"> Selecciona un fitxer del teu ordinador</p>
@@ -140,7 +144,7 @@
                     <hr>
                     <div class="camp">
                     <label for="temps">Temps</label>
-                    <input type="time" id="time" name="Temps">
+                    <input type="time" id="temps" name="Temps">
                     </div>
                     <div class="camp">
                         <label for="mes">Mes</label>
